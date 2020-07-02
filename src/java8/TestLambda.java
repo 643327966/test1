@@ -6,7 +6,7 @@ public class TestLambda {
     public static void main(String[] args) {
         TestLambda testLambda=new TestLambda();
         testLambda.test5();
-
+        System.out.println();
     }
     public void test1(){
         Comparator<Integer> com =new Comparator<Integer>() {
