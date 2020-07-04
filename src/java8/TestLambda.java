@@ -1,5 +1,7 @@
 package java8;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.*;
 
 public class TestLambda {
@@ -29,6 +31,15 @@ public class TestLambda {
             new Employee("张五",46,7777),
             new Employee("张六",26,6666)
     );
+    @Test
+    public void test6(){
+        Collections.sort(employeelist, new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return 0;
+            }
+        });
+    }
     public List<Employee> filterEmployee(List<Employee> elist, Mypredicate<Employee> mtemployee){
         List<Employee> emp=new ArrayList<>();
         for (Employee e:elist){
